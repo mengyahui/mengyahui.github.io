@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [14]
 
     steps:
       - name: Checkout # 步骤1
@@ -23,12 +23,12 @@ jobs:
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
           node-version: ${{ matrix.node-version }} # 版本
-      - name: Build-and-deploy # 步骤3
+      - name: build-and-deploy # 步骤3
         run: |
-          remote_addr=git@github.com:mengyahui/mengyahui.github.io.git
-          commit_info=deploy blog
-          user_name=1216MYH
-          user_email=2772540969@qq.com
+          remote_addr=`git remote get-url --push origin`
+          commit_info=`git describe --all --always --long`
+          user_name=`git log -1 --pretty=format:'%an'`
+          user_email=`git log -1 --pretty=format:'%ae'`
           deploy_branch=gh-pages
           yarn
           yarn build
