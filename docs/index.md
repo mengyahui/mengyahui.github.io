@@ -2,7 +2,7 @@
 home: true
 # heroImage: /img/web.png
 heroText: MYHBlog
-tagline: 不积跬步无以至千里，致敬每个爱学习的你
+tagline: 三更灯火五更鸡，正是男儿读书时
 bannerBg: 'https://cdn.staticaly.com/gh/MYH1216/image-repository@master/bg.1d866bwt5oow.jpg'
 # actionText: 立刻进入 →
 # actionLink: /web/
