@@ -56,6 +56,14 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
       },
       {
+        text: '工具',
+        link: '/tools/',
+        items: [
+          { text: 'Git', link: '/pages/01e90a/' },
+          { text: 'Docker', link: '/pages/f8ef21/' },
+        ],
+      },
+      {
         text: '更多',
         link: '/more/',
         items: [
