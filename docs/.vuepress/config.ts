@@ -256,7 +256,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             {
                 settings: {
                     // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
-                    // cssLib: ['http://xxx'], // 在线示例中的css依赖
+                    cssLib: [
+                        'https://cdn.jsdelivr.net/npm/scss@0.2.4/src/index.min.js',
+                        'https://cdn.jsdelivr.net/npm/less@4.1.3/dist/less.min.js',
+                        'https://cdn.jsdelivr.net/npm/stylus@0.59.0/index.min.js'
+                    ], // 在线示例中的css依赖
                     vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
                     jsfiddle: true, // 是否显示 jsfiddle 链接
                     codepen: true, // 是否显示 codepen 链接
