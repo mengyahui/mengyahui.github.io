@@ -10,7 +10,7 @@ import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
 const DOMAIN_NAME = 'myh.com' // 域名 (不带https)
-const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
+// const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
     theme: 'vdoing', // 使用npm主题包
@@ -19,7 +19,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     locales: {
         '/': {
             lang: 'zh-CN',
-            title: "MYHBlog",
+            title: "MYH's Blog",
             description: 'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
         }
     },
