@@ -35,8 +35,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 link: '/front-end/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
                 items: [
                     // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
-                    {text: 'JavaScript', link: '/pages/e44a21/'},
+                    {text: 'CSS', link: '/pages/24a8e1/'},
                     {text: 'Vue', link: '/pages/f4d72c/'},
+                    {text: 'JavaScript', link: '/pages/e44a21/'},
+
                 ],
             },
             {
@@ -44,6 +46,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 link: '/back-end/',
                 items: [
                     {text: 'SpringBoot', link: '/pages/cd256c/'},
+                    {text: 'SpringCloud', link: '/pages/58a1d3/'},
                     {text: 'MyBatis', link: '/pages/b81f92/'},
                 ],
             },
@@ -96,10 +99,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         // repo: 'xugaoyi/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
         searchMaxSuggestions: 10, // 搜索结果显示最大数
         lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
-        docsDir: 'docs', // 编辑的文件夹
+        // docsDir: 'docs', // 编辑的文件夹
         // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
-        editLinks: true, // 启用编辑
-        editLinkText: '编辑',
+        // editLinks: true, // 启用编辑
+        // editLinkText: '编辑',
         pageStyle: 'card',
         sidebarOpen: false,
 
@@ -124,7 +127,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         //   '图标地址1',
         //   '图标地址2'
         // ],
-        contentBgStyle: 1, // 文章内容块的背景风格，默认无. 1 方格 | 2 横线 | 3 竖线 | 4 左斜线 | 5 右斜线 | 6 点状
+        // contentBgStyle: 1, // 文章内容块的背景风格，默认无. 1 方格 | 2 横线 | 3 竖线 | 4 左斜线 | 5 右斜线 | 6 点状
 
         // updateBar: { // 最近更新栏
         //   showToArticle: true, // 显示到文章页底部，默认true
@@ -196,6 +199,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
     head: [
+        ['script', { src: 'https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js' }],
+        ['script', { src: 'https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js' }],
+        ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
+        ['script', { src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js' }],
         ['link', {rel: 'icon', href: '/img/favicon.ico'}], //favicons，资源放在public文件夹
         [
             'meta',
@@ -204,39 +211,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 content: '博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
             },
         ],
-        ['meta', {name: 'baidu-site-verification', content: '7F55weZDDc'}], // 百度统计的站长验证（你可以去掉）
         ['meta', {name: 'theme-color', content: '#11a8cd'}], // 移动浏览器主题颜色
-        // [
-        //   'script',
-        //   {
-        //     'data-ad-client': 'ca-pub-7828333725993554',
-        //     async: 'async',
-        //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        //   },
-        // ], // 网站关联Google AdSense 与 html格式广告支持（你可以去掉）
     ],
 
 
     // 插件配置
     plugins: <UserPlugins>[
-        [
-            "sitemap", // 网站地图
-            {
-                hostname: WEB_SITE,
-            },
-        ],
-
-        'vuepress-plugin-baidu-autopush', // 百度自动推送
-
-        [
-            'vuepress-plugin-baidu-tongji', // 百度统计
-            {
-                hm: baiduCode,
-            },
-        ],
-
-        // 全文搜索。 ⚠️注意：此插件会在打开网站时多加载部分js文件用于搜索，导致初次访问网站变慢。如在意初次访问速度的话可以不使用此插件！（推荐：vuepress-plugin-thirdparty-search）
-        // 'fulltext-search',
 
         // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
         [
@@ -249,16 +229,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                         behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
                     },
                     {
-                        title: '在Runoob中搜索',
-                        frontUrl: 'https://www.runoob.com/?s=',
-                    },
-                    {
                         title: '在Vue API中搜索',
                         frontUrl: 'https://cn.vuejs.org/v2/api/#',
-                    },
-                    {
-                        title: '在Bing中搜索',
-                        frontUrl: 'https://cn.bing.com/search?q=',
                     },
                     {
                         title: '通过百度搜索本站的',
@@ -268,8 +240,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             }
         ],
 
+        // 代码块复制按钮
         [
-            'one-click-copy', // 代码块复制按钮
+            'one-click-copy',
             {
                 copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
                 copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
@@ -277,22 +250,23 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 showInMobile: false, // whether to display on the mobile side, default: false.
             },
         ],
-
+        // demo演示模块
         [
-            'demo-block', // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
+            'demo-block',
             {
                 settings: {
                     // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
                     // cssLib: ['http://xxx'], // 在线示例中的css依赖
-                    // vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
-                    jsfiddle: false, // 是否显示 jsfiddle 链接
+                    vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
+                    jsfiddle: true, // 是否显示 jsfiddle 链接
                     codepen: true, // 是否显示 codepen 链接
                     horizontal: false, // 是否展示为横向样式
                 },
             },
         ],
+        // 放大图片
         [
-            'vuepress-plugin-zooming', // 放大图片
+            'vuepress-plugin-zooming',
             {
                 selector: '.theme-vdoing-content img:not(.no-zoom)', // 排除class是no-zoom的图片
                 options: {
@@ -300,28 +274,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 },
             },
         ],
-        // [
-        //   'vuepress-plugin-comment', // 评论
-        //   {
-        //     choosen: 'gitalk',
-        //     options: {
-        //       clientID: 'a6e1355287947096b88b',
-        //       clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-        //       repo: 'blog-gitalk-comment', // GitHub 仓库
-        //       owner: 'xugaoyi', // GitHub仓库所有者
-        //       admin: ['xugaoyi'], // 对仓库有写权限的人
-        //       // distractionFreeMode: true,
-        //       pagerDirection: 'last', // 'first'正序 | 'last'倒序
-        //       id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-        //       title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-        //       labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-        //       body:
-        //         '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
-        //     },
-        //   },
-        // ],
+        // "上次更新"时间格式
         [
-            '@vuepress/last-updated', // "上次更新"时间格式
+            '@vuepress/last-updated',
             {
                 transformer: (timestamp, lang) => {
                     return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
