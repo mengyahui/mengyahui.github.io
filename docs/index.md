@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /img/web.png
-heroText: MYHBlog
+heroText: MYH's Blog
 tagline: 三更灯火五更鸡，正是男儿读书时
 bannerBg: 'https://cdn.staticaly.com/gh/mengyahui/image-repository@master/20221017/infinity-1309590.55vmotmozb80.jpg'
 # actionText: 立刻进入 →
