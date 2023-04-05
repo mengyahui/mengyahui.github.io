@@ -1,3 +1,17 @@
+---
+title: vue-admin-template 使用总结
+date: 2023-04-05 09:17:59
+permalink: /pages/c9dd9d/
+sidebar: auto
+sticky: 2
+categories:
+  - 随笔
+tags:
+  - 总结
+author: 
+  name: MYH
+  link: https://github.com/mengyahui
+---
 vue-element-admin 是一个基于 vue 和 element-ui 的后台前端解决方案，内置了动态路由、权限验证等业务模型，提供了丰富的功能组件，可以用于速搭建企业级中后台产品原型。
 
 vue-element-admin 的定位是后台集成方案，集成了很多可能用不到的功能，会造成不少的代码冗余。不太适合当基础模板来进行二次开发。建议使用基础模板 vue-admin-template 进行二次开发，需要用到的组件可以直接从 vue-element-admin 上面拷贝。
