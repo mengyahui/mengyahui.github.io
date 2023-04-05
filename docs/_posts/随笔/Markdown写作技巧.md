@@ -7,7 +7,7 @@ sticky: 1
 categories:
   - 随笔
 tags:
-  - 
+  - 技巧
 author: 
   name: MYH
   link: https://github.com/mengyahui
