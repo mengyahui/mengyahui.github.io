@@ -104,7 +104,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         // editLinks: true, // 启用编辑
         // editLinkText: '编辑',
         pageStyle: 'card',
-        sidebarOpen: false,
+        sidebarOpen: true,
 
         //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
 
