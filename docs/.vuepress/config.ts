@@ -64,6 +64,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 items: [
                     {text: 'Git', link: '/pages/01e90a/'},
                     {text: 'Docker', link: '/pages/f8ef21/'},
+                    {text: 'Nginx', link: '/pages/3a7e1b/'},
                 ],
             },
             {

@@ -16,7 +16,7 @@ features: # 可选的
   - title: 后端
     details: /Spring/SpringBoot/MyBatis/
     link: /back-end/
-    imgUrl: /img/ui.png
+    imgUrl: /img/more.png
   - title: 数据库
     details: /mysql/elasticsearch/redis/
     link: /database/
