@@ -35,7 +35,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
         nav: nav, // 导航配置
         sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
-        logo: '/img/logo.jpg', // 导航栏logo
+        logo: '/img/avatar.png', // 导航栏logo
         searchMaxSuggestions: 5, // 搜索结果显示最大数
         lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
         docsDir: 'docs', // 编辑的文件夹
@@ -45,6 +45,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         pageStyle: 'card',
         sidebarOpen: true, // 初始状态是否打开左侧边栏，默认true
         pageButton: false, // 是否显示快捷翻页按钮，默认true
+
+        // bodyBgImg: 'https://cdn.jsdelivr.net/gh/mengyahui/image-repository@master/home/bgImg.6fn4ojw9urk0.jpg',
 
 
         category: true,         // 是否打开分类功能，默认 true
