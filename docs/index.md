@@ -3,7 +3,7 @@ home: true
 # heroImage: /img/web.png
 #heroText: 早知道浮生若梦，恨不得一夜白头
 #tagline: 每个细节只需要再好一点点，最终结果将会更加完美.
-bannerBg: /img/bgImg.png
+bannerBg: /img/bg.png
 # actionText: 立刻进入 →
 # actionLink: /web/
 # bannerBg: auto # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量

@@ -344,6 +344,7 @@ export default {
   .banner
     width 100%
     min-height 450px
+    //min-height 100vh
     margin-top $navbarHeight
     color $bannerTextColor
     position relative

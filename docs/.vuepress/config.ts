@@ -18,8 +18,8 @@ const DOMAIN_NAME = 'myh.com' // 域名 (不带https)
 // const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
-    theme: 'vdoing', // 使用npm主题包
-    // theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
+    // theme: 'vdoing', // 使用npm主题包
+    theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
 
     locales: {
         '/': {
@@ -35,7 +35,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
         nav: nav, // 导航配置
         sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
-        logo: '/img/logo.png', // 导航栏logo
+        logo: '/img/avatar.jpg', // 导航栏logo
         searchMaxSuggestions: 5, // 搜索结果显示最大数
         lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
         docsDir: 'docs', // 编辑的文件夹
